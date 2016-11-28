@@ -32,7 +32,7 @@ public:
 		opts.wordDim = words.nDim;
 		opts.wordwindow = 2 * opts.wordcontext + 1;
 		opts.inputsize = opts.wordwindow * opts.wordDim;
-		int senthiddensize = opts.hiddensize * 2+ words.nDim;
+		int senthiddensize = opts.rnnhiddensize * 2+ words.nDim;
 
 		left_lstm_project.initial(opts.rnnhiddensize, opts.inputsize, mem);
 		right_lstm_project.initial(opts.rnnhiddensize, opts.inputsize, mem);
