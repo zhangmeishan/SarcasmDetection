@@ -80,7 +80,7 @@ public:
 		local_gated_pooling.init(&model.local_gatedpool_project, mem);
 		context_gated_pooling.init(&model.context_gatedpool_project, mem);
 
-		concat_local_context.init(opts.hiddensize * 2 + model.words.nDim, -1, mem);
+		concat_local_context.init(opts.rnnhiddensize * 2 + model.words.nDim, -1, mem);
 		sent_hidden.init(opts.hiddensize, opts.dropOut, mem);
 		sent_hidden.setParam(&model.sent_tanh_project);
 		output.init(opts.labelSize, -1, mem);
