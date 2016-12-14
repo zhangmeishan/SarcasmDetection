@@ -69,7 +69,7 @@ public:
 		gated_pooling.init(&model.gatedpool_project, mem);
 		sent_hidden.init(opts.hiddensize, opts.dropOut, mem);
 		sent_hidden.setParam(&model.sent_hidden_project);
-		output.init(opts.labelSize, opts.dropOut, mem);
+		output.init(opts.labelSize, -1, mem);
 		output.setParam(&model.olayer_linear);
 	}
 
